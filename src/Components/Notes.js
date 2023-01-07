@@ -4,13 +4,21 @@ import AddNote from './AddNote';
 import NoteItem from './NoteItem';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import { useNavigate } from 'react-router-dom';
 
 const Notes = (props) => {
+    let navigate = useNavigate();
     const context = useContext(NoteContext);
     const { notes, getNotes, editNote } = context;
     useEffect(() => {
+        if(localStorage.getItem('token')){
         getNotes();
-        // eslint-disable-next-line
+    }
+    else{
+      navigate('/login')
+    }
+ //getNotes();
+    // eslint-disable-next-line
     }, [])
 
     //modal functioning
@@ -28,7 +36,6 @@ const Notes = (props) => {
     }
 
     const handleClick = (e) => {
-        console.log("updating the note" + note);
         editNote(note.id , note.etitle, note.edescription, note.etags);
         handleClose();
         props.showAlert("Note Updated Succesfully", "success");
