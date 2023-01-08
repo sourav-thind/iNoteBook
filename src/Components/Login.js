@@ -19,7 +19,7 @@ const Login = (props) => {
             if(json.success){
                 localStorage.setItem('token',json.authToken);
                 props.showAlert("Logged In", "success");
-                navigate('/');
+                navigate('/notes');
               
             }
             else{
@@ -31,20 +31,20 @@ const Login = (props) => {
         setCredentials({...Credentials, [e.target.name]: e.target.value})
     }
   return (
-    <div className='container'>
-        <h1 className='my-4'>Login </h1>
+    <div className='container ' style={{height: '450px'}}>
+        <h1 className='my-5 '>Login </h1>
     <form onSubmit={handleSubmit}>
   <div className="mb-3">
-    <label htmlFor="email" className="form-label">Email</label>
-    <input type="email" className="form-control" id="email" value={Credentials.email} name="email" onChange={onChange} aria-describedby="emailHelp"/>
-    <div id="emailHelp" className="form-text">We'll never share your data with anyone else.</div>
+    <label htmlFor="email" className="form-label my-1">Email</label>
+    <input type="email" className="form-control my-1" id="email" value={Credentials.email} name="email" onChange={onChange} aria-describedby="emailHelp"/>
+    <div id="emailHelp" className="form-text my-3">We'll never share your data with anyone else.</div>
   </div>
   <div className="mb-3">
-    <label htmlFor="password" className="form-label">Password</label>
-    <input type="password" className="form-control" name="password" value={Credentials.password} onChange={onChange} id="password"/>
+    <label htmlFor="password" className="form-label my-2">Password</label>
+    <input type="password" className="form-control my-2" name="password" value={Credentials.password} onChange={onChange} id="password"/>
   </div>
   
-  <button type="submit"  className="btn btn-primary">Submit</button>
+  <button type="submit"  className="btn btn-primary my-2">Submit</button>
 </form>
     </div>
   )

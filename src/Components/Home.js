@@ -1,15 +1,15 @@
 import React from 'react'
-  import Notes from './Notes'
+import MainImage from './MainImage'
+ 
 
 
-export const Home = (props) => {
-  const {showAlert} = props
+export const Home = () => {
+
   
   return (
-    <>
-  
-    <Notes showAlert={showAlert}/>
-    </>
+    <div style={{backgroundColor:'#042743'}}>
+    <MainImage/>
+    </div>
 
   )
 }

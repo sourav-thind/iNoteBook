@@ -17,7 +17,7 @@ const Notes = (props) => {
     else{
       navigate('/login')
     }
- //getNotes();
+
     // eslint-disable-next-line
     }, [])
 
@@ -46,7 +46,7 @@ const Notes = (props) => {
     }
 
     return (
-        <>
+        <div className='container'>
             <AddNote showAlert={props.showAlert}/>
             <Button ref={ref} variant="primary" className="d-none" onClick={handleShow}>Launch demo modal</Button>
 
@@ -84,7 +84,7 @@ const Notes = (props) => {
                     return <NoteItem key={note._id} showAlert={props.showAlert} updateNote={updateNote} note={note} />;
                 })}
             </div>
-        </>
+        </div>
 
     )
 }

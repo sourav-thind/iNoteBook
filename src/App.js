@@ -10,6 +10,9 @@ import Signup from './Components/Signup';
 import Login from './Components/Login';
 import Alert from './Components/Alert';
 import {useState} from 'react';
+import Notes from './Components/Notes';
+import Header from './Components/Header';
+import Footer from './Components/Footer';
 
 function App() {
   const [alert, setAlert]= useState(null); 
@@ -24,22 +27,26 @@ function App() {
     setAlert(null);
    }, 3000);
   }
-
+  
+ 
   return (
     <div className="App">
       <NoteState>
       <Router>
         <Navbar/>
+        <Header/>
         <Alert alert={alert}/>
-        <div className="container">
+        <div >
       <Routes>
-        <Route exact path="/" element={<Home showAlert={showAlert}/>}/>
+        <Route exact path="/" element={<Home/>}/>
+        <Route exact path="/notes" element={<Notes showAlert={showAlert}/>}/>
           <Route exact path="/about" element={<About/>} />
           <Route exact path="/login" element={<Login showAlert={showAlert}/>} />
           <Route exact path="/signup" element={<Signup showAlert={showAlert}/>} />
        
       </Routes>
       </div>
+      <Footer/>
     </Router>
       </NoteState>
     </div>

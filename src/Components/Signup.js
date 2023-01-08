@@ -48,11 +48,11 @@ const Signup = (props) => {
     <input type="password" className="form-control" name="password" onChange={onChange} id="password"/>
   </div>
   <div className="mb-3">
-    <label htmlFor="cpassword" className="form-label">Password</label>
+    <label htmlFor="cpassword" className="form-label">Confirm Password</label>
     <input type="password" className="form-control" name="cpassword" onChange={onChange} id="cpassword"/>
   </div>
   
-  <button type="submit" className="btn btn-primary">Submit</button>
+  <button type="submit" className="btn btn-primary my-3">Submit</button>
 </form>
     </div>
   )

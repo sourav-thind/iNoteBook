@@ -8,8 +8,8 @@ const NoteItem = (props) => {
   return (
     <>
     <div className="col md-3  ">
-    <div className="card my-3" >
-  <div className="card-body " style={{"width": "18em"}}>
+    <div className="card my-3" style={{width:'18em'}}>
+  <div className="card-body  " >
   <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
     {note.tags}</span>
     <h5 className="card-title">{note.title}</h5>
