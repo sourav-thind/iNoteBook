@@ -1,8 +1,8 @@
 import React from 'react'
-import { useLocation } from 'react-router-dom'
+
 
 export default function Alert(props) {
-  const {pathname} = useLocation();
+  
   return (
     <>
     {<div className='sticky-top ' style={{height:'50px', backgroundColor:"#042743", top:'56px'}}>
