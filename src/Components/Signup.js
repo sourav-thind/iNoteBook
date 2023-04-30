@@ -1,6 +1,6 @@
 import React , {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
-import Footer from './Footer';
+
 
 const Signup = (props) => {
     const [Credentials, setCredentials] = useState({name:"" , email:"" , password:"", cpassowrd:""});
@@ -8,7 +8,7 @@ const Signup = (props) => {
     const handleSubmit = async (e) =>{
         e.preventDefault();
         const {name, email ,password} = Credentials;
-        const response = await fetch(`http://localhost:5000/api/auth/createuser`, {
+        const response = await fetch(`https://i-note-book-api.vercel.app/api/auth/createuser`, {
             method: 'POST', 
             headers: {
               'Content-Type': 'application/json'

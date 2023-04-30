@@ -1,7 +1,7 @@
 import React from 'react'
 import { Carousel } from "react-bootstrap";
 import myimg from './Images/myimg.jpg'
-import Footer from './Footer';
+
 
 function About() {
   return (

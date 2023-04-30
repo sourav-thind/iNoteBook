@@ -13,5 +13,5 @@ app.use('/api/auth', require('./routes/auth'));
 app.use('/api/notes', require('./routes/notes'));
 
 app.listen(port, () => {
-  console.log(`iNoteBook Backend listening on http://localhost:${port}`)
+  console.log(`iNoteBook Backend listening on https://i-note-book-api.vercel.app:${port}`)
 })
