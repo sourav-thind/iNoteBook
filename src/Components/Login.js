@@ -1,5 +1,6 @@
 import React , {useState}from 'react';
 import { useNavigate } from 'react-router-dom';
+import Footer from './Footer';
 
 const Login = (props) => {
     const [Credentials, setCredentials] = useState({email:"" , password:""});
@@ -31,8 +32,9 @@ const Login = (props) => {
         setCredentials({...Credentials, [e.target.name]: e.target.value})
     }
   return (
-    <div className='container ' style={{height: '450px'}}>
-        <h1 className='my-5 '>Login </h1>
+  
+    <div className='container ' style={{height: '360px'}}>
+        <h1 className='my-2 '>Login </h1>
     <form onSubmit={handleSubmit}>
   <div className="mb-3">
     <label htmlFor="email" className="form-label my-1">Email</label>
@@ -40,13 +42,14 @@ const Login = (props) => {
     <div id="emailHelp" className="form-text my-3">We'll never share your data with anyone else.</div>
   </div>
   <div className="mb-3">
-    <label htmlFor="password" className="form-label my-2">Password</label>
-    <input type="password" className="form-control my-2" name="password" value={Credentials.password} onChange={onChange} id="password"/>
+    <label htmlFor="password" className="form-label my-1">Password</label>
+    <input type="password" className="form-control my-1" name="password" value={Credentials.password} onChange={onChange} id="password"/>
   </div>
   
-  <button type="submit"  className="btn btn-primary my-2">Submit</button>
+  <button type="submit"  className="btn btn-primary ">Submit</button>
 </form>
     </div>
+
   )
 }
 

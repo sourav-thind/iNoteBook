@@ -1,5 +1,6 @@
 import React , {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
+import Footer from './Footer';
 
 const Signup = (props) => {
     const [Credentials, setCredentials] = useState({name:"" , email:"" , password:"", cpassowrd:""});
@@ -18,7 +19,7 @@ const Signup = (props) => {
         console.log(json);
         if(json.success){
                 localStorage.setItem('token', json.authtoken);
-                navigate('/');
+                navigate('/login');
                 props.showAlert("Account Created Successfully", "success");
         }
         else{
@@ -33,7 +34,7 @@ const Signup = (props) => {
 
   return (
     <div className='container'>
-        <h1 className='my-4'>SignUp</h1>
+        <h1 className='mt-2'>SignUp</h1>
     <form onSubmit={handleSubmit}>
     <div className="mb-3">
     <label htmlFor="name" className="form-label">Name</label>
@@ -54,6 +55,7 @@ const Signup = (props) => {
   
   <button type="submit" className="btn btn-primary my-3">Submit</button>
 </form>
+
     </div>
   )
 }

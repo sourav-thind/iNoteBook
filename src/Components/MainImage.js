@@ -10,8 +10,8 @@ const MainImage = () => {
     {
         `
        #img {
-            height:600px;
-            width: 95%;
+            height:500px;
+            width: 90%;
         }
         .both{
           
@@ -32,7 +32,7 @@ const MainImage = () => {
             top: 74%;
         }
         .h5{
-            top: 40%;
+            top: 35%;
             color:black;
             left: 9%;
         }

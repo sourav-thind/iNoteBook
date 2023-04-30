@@ -1,12 +1,14 @@
 import React , {useState} from "react";
 import NoteContext from "./NoteContext";
 
+
 const NoteState=(props)=>{
     const host = "http://localhost:5000"
 
     const notesInitial =[]
 
-    const [notes, setNotes] = useState(notesInitial)
+    const [notes, setNotes] = useState(notesInitial);
+
 
     //get all notes
     const getNotes = async ()=>{
@@ -40,7 +42,7 @@ const NoteState=(props)=>{
           
           const json = await response.json();
           const  note= json;
-          setNotes(notes.concat(note));
+          setNotes(notes?.concat(note));
            return json;
 
     }

@@ -15,3 +15,10 @@ code {
 button{
   cursor:pointer;
 }
+
+.text-justify{
+  text-align: justify;
+}
+.line-space{
+  line-height:2
+}
