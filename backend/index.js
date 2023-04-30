@@ -1,10 +1,8 @@
 const connectToMongo = require('./db');
 const express = require('express');
 const cors = require('cors');
-require('dotenv').config();
 
-
-connectToMongo();
+connectToMongo({ connectTimeoutMS: 30000, useNewUrlParser: true });
 const app = express()
 const port = process.env.PORT || 5000;
 
