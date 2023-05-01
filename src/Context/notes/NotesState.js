@@ -16,9 +16,11 @@ const NoteState=(props)=>{
  
            const response = await fetch(`${host}/api/notes/fetchallnotes`, {
              method: 'GET', 
+             mode: 'no-cors',
              headers: {
                'Content-Type': 'application/json',
-               'auth-token' : localStorage.getItem('token')
+               'auth-token' : localStorage.getItem('token'),
+               
              },
              
            });
@@ -32,6 +34,7 @@ const NoteState=(props)=>{
     const addNote = async (title, description , tags)=>{
           const response = await fetch(`${host}/api/notes/addnote`, {
             method: 'POST', 
+            mode: 'no-cors',
             headers: {
               'Content-Type': 'application/json',
               "auth-token" : localStorage.getItem('token')
@@ -52,6 +55,7 @@ const NoteState=(props)=>{
         console.log("deleting the note with id" + id);
             const response = await fetch(`${host}/api/notes/deletenote/${id}`, {
               method: 'DELETE', 
+              mode: 'no-cors',
               headers: {
                 'Content-Type': 'application/json',
                 'auth-token' : localStorage.getItem('token')
@@ -82,6 +86,7 @@ const NoteState=(props)=>{
         }
         const response = await fetch(`${host}/api/notes/updatenote/${id}`, {
             method: 'PUT', 
+            mode: 'no-cors',
             headers: {
               'Content-Type': 'application/json',
               "auth-token" : localStorage.getItem('token')

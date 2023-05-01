@@ -9,6 +9,7 @@ const Login = (props) => {
         e.preventDefault();
         const response = await fetch(`https://i-note-book-api.vercel.app/api/auth/login`, {
             method: 'POST', 
+            mode: 'no-cors',
             headers: {
               'Content-Type': 'application/json'
             },
