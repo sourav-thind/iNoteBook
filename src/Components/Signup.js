@@ -10,7 +10,6 @@ const Signup = (props) => {
         const {name, email ,password} = Credentials;
         const response = await fetch(`https://i-note-book-api.vercel.app/api/auth/createuser`, {
             method: 'POST', 
-            mode: 'no-cors',
             headers: {
               'Content-Type': 'application/json'
             },
